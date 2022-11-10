@@ -27,7 +27,7 @@
   '--..' => 'Z'
 }
 
-def get_letter(letter)
+def decode_letter(letter)
   @current_letter = @dictionary[letter]
   @current_letter
 end
@@ -36,8 +36,8 @@ def decode_word(word)
   @letters = word.split
   @current_word = ''
   @letters.each do |letter|
-    get_letter(letter)
-    @current_word += get_letter(letter)
+    decode_letter(letter)
+    @current_word += decode_letter(letter)
   end
   print "#{@current_word} "
 end
