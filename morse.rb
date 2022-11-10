@@ -36,9 +36,7 @@ def decode_word(word)
   @letters = word.split
   @current_word = ''
   @letters.each do |letter|
-    decode_letter(letter)
     @current_word += decode_letter(letter)
   end
   print "#{@current_word} "
 end
-
